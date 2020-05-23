@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jlk-s_000"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-05-23 12:57:08 "/>
+        <attribute name="created" value="amxrLXNfMDAwO0ZBTUlMSUFTQVBPOzIwMjAtMDUtMjE7IjA3OjU3OjE3ICI7MjcyMA=="/>
+        <attribute name="edited" value="amxrLXNfMDAwO0ZBTUlMSUFTQVBPOzIwMjAtMDUtMjM7IjEyOjU3OjA4ICI7NTsyODMw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="aluno, usuario, professor" type="String" array="False" size=""/>
+            <assign variable="usuario" expression="&quot;PROFESSOR&quot;"/>
+            <assign variable="professor" expression="&quot;Leandro&quot;"/>
+            <declare name="senha" type="Integer" array="False" size=""/>
+            <declare name="nota1, nota2, nota3, nota4, media" type="Real" array="False" size=""/>
+            <declare name="opcao" type="String" array="False" size=""/>
+            <declare name="continuar" type="Boolean" array="False" size=""/>
+            <output expression="&quot;Seja Bem Vindo ao sistema PRO-ESCOLA&quot;" newline="True"/>
+            <if expression="usuario = &quot;PROFESSOR&quot;">
+                <then>
+                    <output expression="&quot;Informe nome do(a) professor(a)&quot;" newline="True"/>
+                    <input variable="professor"/>
+                    <output expression="&quot;Digite sua senha&quot;" newline="True"/>
+                    <input variable="senha"/>
+                    <if expression="senha = 1206">
+                        <then>
+                            <output expression="&quot;Seja bem vindo professor &quot;&amp;professor&amp;&quot;, fique a vontade!&quot;" newline="True"/>
+                            <do expression="continuar = true">
+                                <output expression="&quot;Cadastre seu aluno&quot;" newline="True"/>
+                                <input variable="aluno"/>
+                                <output expression="&quot;1&#170; Nota de &quot;&amp;aluno" newline="True"/>
+                                <input variable="nota1"/>
+                                <output expression="&quot;2&#170; nota de &quot;&amp;aluno" newline="True"/>
+                                <input variable="nota2"/>
+                                <output expression="&quot;3&#170; nota de &quot;&amp;aluno" newline="True"/>
+                                <input variable="nota3"/>
+                                <output expression="&quot;4&#170; nota de &quot;&amp;aluno" newline="True"/>
+                                <input variable="nota4"/>
+                                <assign variable="media" expression="(nota1 + nota2 + nota3 + nota4) / 4"/>
+                                <if expression="media &gt;= 7">
+                                    <then>
+                                        <output expression="&quot;O aluno &quot;&amp;aluno&amp;&quot; foi aprovado com a nota final de: &quot;&amp;media" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;O aluno &quot;&amp;aluno&amp;&quot; foi reprovado com a nota final de: &quot;&amp;media" newline="True"/>
+                                    </else>
+                                </if>
+                                <output expression="&quot;Deseja Avaliar outro aluno? Digite SIM ou NAO&quot;" newline="True"/>
+                                <input variable="opcao"/>
+                                <while expression="opcao &lt;&gt; &quot;NAO&quot; and opcao &lt;&gt; &quot;SIM&quot;">
+                                    <output expression="&quot;Op&#231;&#227;o INVALIDA, digite SIM ou NAO&quot;" newline="True"/>
+                                    <input variable="opcao"/>
+                                </while>
+                                <if expression="opcao = &quot;SIM&quot;">
+                                    <then>
+                                        <assign variable="continuar" expression="true"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="continuar" expression="false"/>
+                                    </else>
+                                </if>
+                            </do>
+                            <output expression="&quot;A sess&#227;o ser&#225; encerrada, at&#233; breve &quot;&amp;professor" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Senha incorreta, digite novamente sua senha&quot;" newline="True"/>
+                            <input variable="senha"/>
+                            <if expression="senha = 1206">
+                                <then>
+                                    <output expression="&quot;Seja bem vindo professor &quot;&amp;professor&amp;&quot;, fique a vontade!&quot;" newline="True"/>
+                                    <do expression="continuar = true">
+                                        <output expression="&quot;Cadastre seu aluno&quot;" newline="True"/>
+                                        <input variable="aluno"/>
+                                        <output expression="&quot;1&#170; Nota de &quot;&amp;aluno" newline="True"/>
+                                        <input variable="nota1"/>
+                                        <output expression="&quot;2&#170; nota de &quot;&amp;aluno" newline="True"/>
+                                        <input variable="nota2"/>
+                                        <output expression="&quot;3&#170; nota de &quot;&amp;aluno" newline="True"/>
+                                        <input variable="nota3"/>
+                                        <output expression="&quot;4&#170; nota de &quot;&amp;aluno" newline="True"/>
+                                        <input variable="nota4"/>
+                                        <assign variable="media" expression="(nota1 + nota2 + nota3 + nota4) / 4"/>
+                                        <if expression="media &gt;= 7">
+                                            <then>
+                                                <output expression="&quot;O aluno &quot;&amp;aluno&amp;&quot; foi aprovado com a nota final de: &quot;&amp;media" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;O aluno &quot;&amp;aluno&amp;&quot; foi reprovado com a nota final de: &quot;&amp;media" newline="True"/>
+                                            </else>
+                                        </if>
+                                        <output expression="&quot;Deseja Avaliar outro aluno?&quot;" newline="True"/>
+                                        <input variable="opcao"/>
+                                        <while expression="opcao &lt;&gt; &quot;NAO&quot; and opcao &lt;&gt; &quot;SIM&quot;">
+                                            <output expression="&quot;Op&#231;&#227;o INVALIDA, digite SIM ou NAO&quot;" newline="True"/>
+                                            <input variable="opcao"/>
+                                        </while>
+                                        <if expression="opcao = &quot;SIM&quot;">
+                                            <then>
+                                                <assign variable="continuar" expression="true"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="continuar" expression="false"/>
+                                            </else>
+                                        </if>
+                                    </do>
+                                    <output expression="&quot;A sess&#227;o ser&#225; encerrada, at&#233; breve &quot;&amp;professor" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Sua senha n&#227;o confere, opera&#231;&#227;o ser&#225; finalizada, reinicie o processo.&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
